@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "source": "github",
+    "hint": "Edita este archivo en el repo. Al hacer push, el workflow public-news-feed lo despliega para jugadores."
+  },
+  "featured": {
+    "id": "career-load-v2",
+    "date": "27 JUN 2026",
+    "tag": "changelog",
+    "title": "Cargar carrera · tabla táctica",
+    "excerpt": "Listado enriquecido con club, fecha, temporada, vista previa del manager y acciones Cargar/Eliminar.",
+    "body": "<p>La pantalla <strong>CARGAR CARRERA</strong> deja atrás la lista simple de nombres y pasa a un registro táctico completo.</p><ul><li>Metadatos reales leídos del autosave: manager, club, progreso en liga y temporada.</li><li>Selección de fila con panel de resumen inferior.</li><li>Botones con el mismo lenguaje visual que el menú principal.</li><li>Estadísticas de almacenamiento y contador de partidas guardadas.</li></ul>",
+    "headline": "Titular"
+  },
+  "items": [
+    {
+      "id": "v1-tactical-ui",
+      "date": "27 JUN 2026",
+      "tag": "update",
+      "title": "Shell táctico WebView2",
+      "excerpt": "Menú principal rediseñado con estética de comando imperial, navegación estable y HUD de versión en tiempo real.",
+      "body": "<p>El frontend del juego migra a una interfaz <strong>WebView2</strong> con diseño táctico unificado: columna de mando fija, panel de contenido dinámico y efectos holográficos locales (sin CDN).</p><ul><li>Marca, módulos del simulador y botones de navegación permanecen anclados al cambiar de pantalla.</li><li>HUD inferior con versión del juego y pack de base de datos activo.</li><li>Paleta violeta/neón alineada al mockup de referencia del proyecto.</li></ul><p class=\\\"tc-news-modal-note\\\">Ideal para iterar la UI sin recompilar el cliente 3D en cada ajuste visual.</p>"
+    },
+    {
+      "id": "fictional-packs",
+      "date": "27 JUN 2026",
+      "tag": "feature",
+      "title": "Mundo ficticio y packs",
+      "excerpt": "Contenido procedural sin marcas reales: nombres, presupuestos y escudos generados en el pack.",
+      "body": "<p>Empire Football apuesta por un universo <strong>100% ficticio</strong> para el lanzamiento comercial.</p><ul><li>Packs <em>default</em> y <em>realworld</em> (DLC) con manifiestos versionados.</li><li>Pipeline Python para construir bases de datos, kits y assets del pack.</li><li>Eliminada la dependencia de fuentes externas con copyright.</li></ul>"
+    },
+    {
+      "id": "steam-v1-roadmap",
+      "date": "27 JUN 2026",
+      "tag": "roadmap",
+      "title": "Hoja de ruta Steam v1",
+      "excerpt": "Hub de manager, calendario, plantilla, prensa y partido 3D en un flujo continuo WebView ↔ motor.",
+      "body": "<p>Objetivo del primer hito en Steam: una experiencia de manager jugable de punta a punta.</p><ul><li>Secciones del hub migradas a WebView: calendario, plantilla, clasificación, inbox, finanzas…</li><li>Partido rápido y carrera de liga con vuelta fluida al menú HTML.</li><li>Próximos pasos: pulir UX de nueva carrera, diálogos modales tácticos y localización.</li></ul>"
+    },
+    {
+      "id": "news-feed-editable",
+      "date": "27 JUN 2026",
+      "tag": "update",
+      "title": "¿Cómo editar estas noticias?",
+      "excerpt": "Edita news_feed.json en GitHub; el workflow lo publica y el menú lo descarga con caché.",
+      "body": "<p>El canal vive en <strong>data/media/ui/web/manager/news_feed.json</strong> en el repositorio.</p><ul><li><strong>featured</strong>: titular a ancho completo (headline, title, excerpt, body).</li><li><strong>items</strong>: hasta 8 bloques en fila horizontal.</li><li><strong>tag</strong>: update, changelog, feature, roadmap.</li><li>Al hacer <em>push</em>, GitHub Actions publica el JSON (Pages o repo público de updates).</li><li>El juego lo descarga al abrir el menú; sin red usa la copia embebida del instalador.</li></ul><p class=\\\"tc-news-modal-note\\\">Valida localmente con <em>python tools/validate_news_feed.py</em>.</p>"
+    }
+  ]
+}
